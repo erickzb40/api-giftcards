@@ -22,6 +22,8 @@ namespace GiftCards.entity
         [NotMapped]
         public string? nombre_usuario { get; set; }
         public string? descripcion { get; set; }
+        [NotMapped]
+        public string? token { get; set; }
 
     }
 

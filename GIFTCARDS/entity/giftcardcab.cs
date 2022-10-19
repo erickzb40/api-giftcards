@@ -33,11 +33,12 @@ namespace GiftCards.entity
         public int usuario { get; set; }
         [Required]
         public DateTime fecha_creacion { get; set; }
-        public DateTime? fecha_aprobacion { get; set; }
-        public int? user_aprob_giftcard { get; set; }
-        public int local { get; set; }
+        //public int local { get; set; }
         public int estado { get; set; }
         [NotMapped]
         public DateTime fecha_vencimiento { get; set; }
+        [NotMapped]
+        public string? token { get; set; }
+        public int local { get; set; }
     }
 }

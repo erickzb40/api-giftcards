@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\proyectos\\apis\\GIFTCARDS\\GIFTCARDS\\GIFTCARDS.csproj": {}
+    "C:\\proyectos\\apis\\api-giftcards\\GIFTCARDS\\GIFTCARDS.csproj": {}
   },
   "projects": {
-    "C:\\proyectos\\apis\\GIFTCARDS\\GIFTCARDS\\GIFTCARDS.csproj": {
+    "C:\\proyectos\\apis\\api-giftcards\\GIFTCARDS\\GIFTCARDS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\proyectos\\apis\\GIFTCARDS\\GIFTCARDS\\GIFTCARDS.csproj",
+        "projectUniqueName": "C:\\proyectos\\apis\\api-giftcards\\GIFTCARDS\\GIFTCARDS.csproj",
         "projectName": "GIFTCARDS",
-        "projectPath": "C:\\proyectos\\apis\\GIFTCARDS\\GIFTCARDS\\GIFTCARDS.csproj",
+        "projectPath": "C:\\proyectos\\apis\\api-giftcards\\GIFTCARDS\\GIFTCARDS.csproj",
         "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
-        "outputPath": "C:\\proyectos\\apis\\GIFTCARDS\\GIFTCARDS\\obj\\",
+        "outputPath": "C:\\proyectos\\apis\\api-giftcards\\GIFTCARDS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config",

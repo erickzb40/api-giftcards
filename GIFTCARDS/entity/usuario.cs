@@ -1,19 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GiftCards.entity
 {
-    public class usuario
+    public class Usuario
     {
         [Key]
-        public int id { get; set; }
-        //nombre con el que se logea el usuario
-        public string usuario_nombre { get; set; }
-        //nombre del usuario
-        public string? nombre { get; set; }
+        public int usuarioid { get; set; }
+        public string? nombreusuario { get; set; }
         public string? contrasena { get; set; }
-        public string? correo { get; set; }
-        [Required]
-        public int local { get; set; }
+        public string? nombres { get; set; }
+        public string? correoelectronico { get; set; }
+        [NotMapped]
+        public string empresa { get; set; }
 
     }
 }

@@ -1,4 +1,5 @@
 
+using Asistencia_apirest.services;
 using GiftCards;
 using GiftCards.metodos;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<SecurityManager>();
 builder.Services.AddTransient<GenerarCodigoCupon>();
+builder.Services.AddTransient<cifrado>();
+builder.Services.AddTransient<util>();
 //builder.Services.AddTransient<IEmpleadoRepository, EmpleadoRepository>();
 //builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
 
@@ -32,6 +35,7 @@ builder.Services.AddCors(options =>
         .WithOrigins(origins)
         .AllowAnyMethod()
         .AllowAnyHeader()
+        .AllowAnyOrigin()
         );
 });
 
