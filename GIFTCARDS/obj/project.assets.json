@@ -1973,11 +1973,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\proyectos\\apis\\api-giftcards\\GIFTCARDS\\GIFTCARDS.csproj",
+      "projectUniqueName": "E:\\proyectos\\apis\\api-giftcards\\GIFTCARDS\\GIFTCARDS.csproj",
       "projectName": "GIFTCARDS",
-      "projectPath": "C:\\proyectos\\apis\\api-giftcards\\GIFTCARDS\\GIFTCARDS.csproj",
+      "projectPath": "E:\\proyectos\\apis\\api-giftcards\\GIFTCARDS\\GIFTCARDS.csproj",
       "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
-      "outputPath": "C:\\proyectos\\apis\\api-giftcards\\GIFTCARDS\\obj\\",
+      "outputPath": "E:\\proyectos\\apis\\api-giftcards\\GIFTCARDS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PjBnTnrmhPJW/tj+ciw8dojhe2Vc6xQOU1n40Z4xdA2HjEPTXa9Fbv1nJ/P3qvfG/Pu0qSm0VkPF0+6TJpVZYw==",
+  "dgSpecHash": "dl+ISiKl0vjKT+83QB/uhrx1BREBhAUanij0B9Xd2A3SzxLkWNB97HJl0fl8sNAQDqOhY1FSbU+h+BGjvA0o4g==",
   "success": true,
-  "projectFilePath": "C:\\proyectos\\apis\\api-giftcards\\GIFTCARDS\\GIFTCARDS.csproj",
+  "projectFilePath": "E:\\proyectos\\apis\\api-giftcards\\GIFTCARDS\\GIFTCARDS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\erick\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\erick\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
