@@ -2,6 +2,7 @@
 using Asistencia_apirest.services;
 using GiftCards;
 using GiftCards.metodos;
+using GIFTCARDS.metodos;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +23,7 @@ builder.Services.AddTransient<SecurityManager>();
 builder.Services.AddTransient<GenerarCodigoCupon>();
 builder.Services.AddTransient<cifrado>();
 builder.Services.AddTransient<util>();
+builder.Services.AddTransient<Conversion>();
 //builder.Services.AddTransient<IEmpleadoRepository, EmpleadoRepository>();
 //builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
 

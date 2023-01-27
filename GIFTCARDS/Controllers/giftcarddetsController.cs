@@ -23,7 +23,7 @@ namespace GiftCards.Controllers
 
         // GET: api/giftcarddets
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<giftcarddet>>> Getcarddets(string token)
+        public async Task<ActionResult<IEnumerable<giftcarddet>>> Getcarddets([FromHeader] string token,string desde,string hasta)
         {
             var vtoken = _cifrado.validarToken(token);
             if (vtoken == null)
@@ -50,13 +50,13 @@ namespace GiftCards.Controllers
                 {
                     return NotFound();
                 }
-                return await   context.carddets.ToListAsync();
+                return await   context.carddets.Where(a=>a.fecha_creado>=DateTime.Parse(desde)&&a.fecha_creado<= DateTime.Parse(hasta).AddDays(1).AddSeconds(-1)).ToListAsync();
             }
         }
 
         // GET: api/giftcarddets/5
         [HttpGet("{documento}")]
-        public async Task<ActionResult<giftcarddet>> Getgiftcarddet(string documento,string token)
+        public async Task<ActionResult<giftcarddet>> Getgiftcarddet(string documento, [FromHeader] string token)
         {
             var vtoken = _cifrado.validarToken(token);
             if (vtoken == null)
@@ -95,7 +95,7 @@ namespace GiftCards.Controllers
         }
 
         [HttpGet("serie/{serie}")]
-        public async Task<ActionResult<giftcarddet>> GetSerie(string serie,string token)
+        public async Task<ActionResult<giftcarddet>> GetSerie(string serie, [FromHeader] string token)
         {
             var vtoken = _cifrado.validarToken(token);
             if (vtoken == null)
@@ -158,9 +158,9 @@ namespace GiftCards.Controllers
         // PUT: api/demo/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut]
-        public async Task<IActionResult> Putgiftcarddet(giftcarddet giftcarddet)
+        public async Task<IActionResult> Putgiftcarddet([FromHeader] string token,giftcarddet giftcarddet)
         {
-            var vtoken = _cifrado.validarToken(giftcarddet.token);
+            var vtoken = _cifrado.validarToken(token);
             if (vtoken == null)
             {
                 return Problem("El token no es valido!");

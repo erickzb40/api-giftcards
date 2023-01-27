@@ -2,6 +2,67 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Lexical.FileProvider/0.14.4": {
+        "type": "package",
+        "dependencies": {
+          "Lexical.FileProvider.Abstractions": "0.14.4",
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Lexical.FileProvider.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Lexical.FileProvider.dll": {}
+        }
+      },
+      "Lexical.FileProvider.Abstractions/0.14.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Lexical.FileProvider.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Lexical.FileProvider.Abstractions.dll": {}
+        }
+      },
+      "Lexical.FileProvider.SharpCompress/0.14.4": {
+        "type": "package",
+        "dependencies": {
+          "Lexical.FileProvider": "0.14.4",
+          "Lexical.FileProvider.Abstractions": "0.14.4",
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.2.0",
+          "SharpCompress": "0.29.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Lexical.FileProvider.SharpCompress.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Lexical.FileProvider.SharpCompress.dll": {}
+        }
+      },
+      "MailKit/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "MimeKit": "3.2.0"
+        },
+        "compile": {
+          "lib/net6.0/MailKit.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/MailKit.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -207,6 +268,18 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "Microsoft.Extensions.FileProviders.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        }
+      },
       "Microsoft.Extensions.Logging/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -392,6 +465,86 @@
           }
         }
       },
+      "MimeKit/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Portable.BouncyCastle": "1.9.0",
+          "System.Security.Cryptography.Pkcs": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/MimeKit.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/MimeKit.dll": {}
+        }
+      },
+      "NETCore.MailKit/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MailKit": "3.2.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/NETCore.MailKit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/NETCore.MailKit.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Portable.BouncyCastle/1.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
+        }
+      },
+      "Select.HtmlToPdf.NetCore/22.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
+          "Newtonsoft.Json": "12.0.1",
+          "System.Buffers": "4.5.0",
+          "System.Drawing.Common": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.1",
+          "System.Text.Encoding.CodePages": "4.5.1",
+          "System.Threading.Tasks.Extensions": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Select.HtmlToPdf.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Select.HtmlToPdf.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/Select.Html.dep": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Select.Html.dep"
+          }
+        }
+      },
+      "SharpCompress/0.29.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/SharpCompress.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/SharpCompress.dll": {}
+        }
+      },
       "Swashbuckle.AspNetCore/6.2.3": {
         "type": "package",
         "dependencies": {
@@ -443,6 +596,15 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "System.Buffers/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
       "System.Collections.Immutable/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -493,7 +655,7 @@
           "Microsoft.Win32.SystemEvents": "4.7.0"
         },
         "compile": {
-          "ref/netcoreapp3.0/_._": {}
+          "ref/netcoreapp3.0/System.Drawing.Common.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Drawing.Common.dll": {}
@@ -509,6 +671,18 @@
           }
         }
       },
+      "System.Formats.Asn1/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Formats.Asn1.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/System.Formats.Asn1.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
       "System.IdentityModel.Tokens.Jwt/6.8.0": {
         "type": "package",
         "dependencies": {
@@ -520,6 +694,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Runtime.Caching/4.7.0": {
@@ -586,6 +769,27 @@
           }
         }
       },
+      "System.Security.Cryptography.Pkcs/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Formats.Asn1": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Security.Cryptography.Pkcs.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/System.Security.Cryptography.Pkcs.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Security.Cryptography.ProtectedData/4.7.0": {
         "type": "package",
         "compile": {
@@ -617,7 +821,7 @@
       "System.Security.Principal.Windows/4.7.0": {
         "type": "package",
         "compile": {
-          "ref/netcoreapp3.0/_._": {}
+          "ref/netcoreapp3.0/System.Security.Principal.Windows.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
@@ -639,7 +843,7 @@
           "Microsoft.NETCore.Platforms": "3.1.0"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
@@ -649,6 +853,15 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
         }
       },
       "System.Windows.Extensions/4.7.0": {
@@ -672,6 +885,105 @@
     }
   },
   "libraries": {
+    "Lexical.FileProvider/0.14.4": {
+      "sha512": "M/Frbr0qxWLvWMNWmqfOW2JY+dzSgQuLrEIGV/4VR4NS4eLd6WHtRXfLNYSPvAc1iw169mvX0SWqLFJfLnKgFg==",
+      "type": "package",
+      "path": "lexical.fileprovider/0.14.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lexical.fileprovider.0.14.4.nupkg.sha512",
+        "lexical.fileprovider.nuspec",
+        "lib/netstandard2.0/Lexical.FileProvider.dll"
+      ]
+    },
+    "Lexical.FileProvider.Abstractions/0.14.4": {
+      "sha512": "66S15aFUhiN1hDCUy+DfVL+PNTZ9JZD6+WHuFApSJyCKK2BaKd34ujLgzk1sBZP9/p+rNgK6kVYrr+WWIMJCsQ==",
+      "type": "package",
+      "path": "lexical.fileprovider.abstractions/0.14.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lexical.fileprovider.abstractions.0.14.4.nupkg.sha512",
+        "lexical.fileprovider.abstractions.nuspec",
+        "lib/netstandard2.0/Lexical.FileProvider.Abstractions.dll"
+      ]
+    },
+    "Lexical.FileProvider.SharpCompress/0.14.4": {
+      "sha512": "S636no3nilyjrOkb7lDIfZoyDe3uVAOBNelNVivZhqWSyAe4t1mk0AfxOLyg93/1JhXCQ3DDEJU6K0ycktZBgg==",
+      "type": "package",
+      "path": "lexical.fileprovider.sharpcompress/0.14.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lexical.fileprovider.sharpcompress.0.14.4.nupkg.sha512",
+        "lexical.fileprovider.sharpcompress.nuspec",
+        "lib/netstandard2.0/Lexical.FileProvider.SharpCompress.dll"
+      ]
+    },
+    "MailKit/3.2.0": {
+      "sha512": "5MTpTqmjqT7HPvYbP3HozRZMth5vSaT0ReN0iM3rAM4CgLI/R1qqtLDDNWGnFFIlcNzeJkZQRJJMkv8cgzWBbA==",
+      "type": "package",
+      "path": "mailkit/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icons/mailkit-50.png",
+        "lib/net452/MailKit.dll",
+        "lib/net452/MailKit.pdb",
+        "lib/net452/MailKit.xml",
+        "lib/net461/MailKit.dll",
+        "lib/net461/MailKit.pdb",
+        "lib/net461/MailKit.xml",
+        "lib/net47/MailKit.dll",
+        "lib/net47/MailKit.pdb",
+        "lib/net47/MailKit.xml",
+        "lib/net48/MailKit.dll",
+        "lib/net48/MailKit.pdb",
+        "lib/net48/MailKit.xml",
+        "lib/net5.0/MailKit.dll",
+        "lib/net5.0/MailKit.pdb",
+        "lib/net5.0/MailKit.xml",
+        "lib/net6.0/MailKit.dll",
+        "lib/net6.0/MailKit.pdb",
+        "lib/net6.0/MailKit.xml",
+        "lib/netstandard2.0/MailKit.dll",
+        "lib/netstandard2.0/MailKit.pdb",
+        "lib/netstandard2.0/MailKit.xml",
+        "lib/netstandard2.1/MailKit.dll",
+        "lib/netstandard2.1/MailKit.pdb",
+        "lib/netstandard2.1/MailKit.xml",
+        "mailkit.3.2.0.nupkg.sha512",
+        "mailkit.nuspec"
+      ]
+    },
+    "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
+      "sha512": "1Am6l4Vpn3/K32daEqZI+FFr96OlZkgwK2LcT3pZ2zWubR5zTPW3/FkO1Rat9kb7oQOa4rxgl9LJHc5tspCWfg==",
+      "type": "package",
+      "path": "microsoft.bcl.asyncinterfaces/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
+        "microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.nuspec",
+        "ref/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "Microsoft.CSharp/4.5.0": {
       "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "type": "package",
@@ -1030,6 +1342,19 @@
         "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.FileProviders.Abstractions/2.2.0": {
+      "sha512": "EcnaSsPTqx2MGnHrmWOD0ugbuuqVT8iICqSqPzi45V5/MA1LjUNb0kwgcxBGqizV1R+WeBK7/Gw25Jzkyk9bIw==",
+      "type": "package",
+      "path": "microsoft.extensions.fileproviders.abstractions/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
+        "microsoft.extensions.fileproviders.abstractions.2.2.0.nupkg.sha512",
+        "microsoft.extensions.fileproviders.abstractions.nuspec"
       ]
     },
     "Microsoft.Extensions.Logging/6.0.0": {
@@ -1394,6 +1719,146 @@
         "version.txt"
       ]
     },
+    "MimeKit/3.2.0": {
+      "sha512": "l9YHMBhBUwY7qQHUp8fw0EvjcbmhN4Iggz6MdjqIShBf42+0nJTa5gu0kuupCOPuiARc9ZaS9c9f0gKz4OnxKw==",
+      "type": "package",
+      "path": "mimekit/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icons/mimekit-50.png",
+        "lib/net452/MimeKit.dll",
+        "lib/net452/MimeKit.pdb",
+        "lib/net452/MimeKit.xml",
+        "lib/net461/MimeKit.dll",
+        "lib/net461/MimeKit.pdb",
+        "lib/net461/MimeKit.xml",
+        "lib/net47/MimeKit.dll",
+        "lib/net47/MimeKit.pdb",
+        "lib/net47/MimeKit.xml",
+        "lib/net48/MimeKit.dll",
+        "lib/net48/MimeKit.pdb",
+        "lib/net48/MimeKit.xml",
+        "lib/net5.0/MimeKit.dll",
+        "lib/net5.0/MimeKit.pdb",
+        "lib/net5.0/MimeKit.xml",
+        "lib/net6.0/MimeKit.dll",
+        "lib/net6.0/MimeKit.pdb",
+        "lib/net6.0/MimeKit.xml",
+        "lib/netstandard2.0/MimeKit.dll",
+        "lib/netstandard2.0/MimeKit.pdb",
+        "lib/netstandard2.0/MimeKit.xml",
+        "lib/netstandard2.1/MimeKit.dll",
+        "lib/netstandard2.1/MimeKit.pdb",
+        "lib/netstandard2.1/MimeKit.xml",
+        "mimekit.3.2.0.nupkg.sha512",
+        "mimekit.nuspec"
+      ]
+    },
+    "NETCore.MailKit/2.1.0": {
+      "sha512": "+1C0sg4YJQczp/2RVrVbKLIntg7Mou7Ie5M01UBiAsxmIarjfBRlCgKK4sEbPyGask52VRKV29/Zi+41B6LPXA==",
+      "type": "package",
+      "path": "netcore.mailkit/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.1/NETCore.MailKit.dll",
+        "netcore.mailkit.2.1.0.nupkg.sha512",
+        "netcore.mailkit.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/12.0.1": {
+      "sha512": "pBR3wCgYWZGiaZDYP+HHYnalVnPJlpP1q55qvVb+adrDHmFMDc1NAKio61xTwftK3Pw5h7TZJPJEEVMd6ty8rg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.pdb",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.pdb",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.pdb",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.pdb",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.pdb",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.pdb",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.pdb",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
+    "Portable.BouncyCastle/1.9.0": {
+      "sha512": "eZZBCABzVOek+id9Xy04HhmgykF0wZg9wpByzrWN7q8qEI0Qen9b7tfd7w8VA3dOeesumMG7C5ZPy0jk7PSRHw==",
+      "type": "package",
+      "path": "portable.bouncycastle/1.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/BouncyCastle.Crypto.dll",
+        "lib/net40/BouncyCastle.Crypto.xml",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "portable.bouncycastle.1.9.0.nupkg.sha512",
+        "portable.bouncycastle.nuspec"
+      ]
+    },
+    "Select.HtmlToPdf.NetCore/22.2.0": {
+      "sha512": "9+4vJgM/XidicfnwB96wMU1InPfwBqEK/m02yPYiEev07rcguB+uIkEdjXoAJ336X9Pi90GF5An1cCk/dhTNcg==",
+      "type": "package",
+      "path": "select.htmltopdf.netcore/22.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "contentFiles/any/any/Select.Html.dep",
+        "images/icon.png",
+        "lib/net461/Select.Html.dep",
+        "lib/net461/Select.HtmlToPdf.dll",
+        "lib/net461/Select.HtmlToPdf.xml",
+        "lib/net472/Select.Html.dep",
+        "lib/net472/Select.HtmlToPdf.dll",
+        "lib/net472/Select.HtmlToPdf.xml",
+        "lib/netstandard2.0/Select.Html.dep",
+        "lib/netstandard2.0/Select.HtmlToPdf.dll",
+        "lib/netstandard2.0/Select.HtmlToPdf.xml",
+        "readme.txt",
+        "select.htmltopdf.netcore.22.2.0.nupkg.sha512",
+        "select.htmltopdf.netcore.nuspec"
+      ]
+    },
+    "SharpCompress/0.29.0": {
+      "sha512": "k7iUB0mZWS6eEj6L0PuuxASzjpQvlYKfHJ0JtnHBJFbU3VeQJ4SNQC4eloiYsPbmFrJCJYiqFhV4AZuBXpIXiQ==",
+      "type": "package",
+      "path": "sharpcompress/0.29.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/SharpCompress.dll",
+        "lib/netcoreapp3.1/SharpCompress.dll",
+        "lib/netstandard2.0/SharpCompress.dll",
+        "lib/netstandard2.1/SharpCompress.dll",
+        "sharpcompress.0.29.0.nupkg.sha512",
+        "sharpcompress.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.2.3": {
       "sha512": "cnzQDn0Le+hInsw2SYwlOhOCPXpYi/szcvnyqZJ12v+QyrLBwAmWXBg6RIyHB18s/mLeywC+Rg2O9ndz0IUNYQ==",
       "type": "package",
@@ -1473,6 +1938,35 @@
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
         "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
+      ]
+    },
+    "System.Buffers/4.5.0": {
+      "sha512": "pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
+      "type": "package",
+      "path": "system.buffers/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net45/System.Buffers.dll",
+        "ref/net45/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "ref/uap10.0.16299/_._",
+        "system.buffers.4.5.0.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Collections.Immutable/6.0.0": {
@@ -1585,6 +2079,29 @@
         "version.txt"
       ]
     },
+    "System.Formats.Asn1/6.0.0": {
+      "sha512": "T6fD00dQ3NTbPDy31m4eQUwKW84s03z0N2C8HpOklyeaDgaJPa/TexP4/SkORMSOwc7WhKifnA6Ya33AkzmafA==",
+      "type": "package",
+      "path": "system.formats.asn1/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Formats.Asn1.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Formats.Asn1.dll",
+        "lib/net461/System.Formats.Asn1.xml",
+        "lib/net6.0/System.Formats.Asn1.dll",
+        "lib/net6.0/System.Formats.Asn1.xml",
+        "lib/netstandard2.0/System.Formats.Asn1.dll",
+        "lib/netstandard2.0/System.Formats.Asn1.xml",
+        "system.formats.asn1.6.0.0.nupkg.sha512",
+        "system.formats.asn1.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.IdentityModel.Tokens.Jwt/6.8.0": {
       "sha512": "5tBCjAub2Bhd5qmcd0WhR5s354e4oLYa//kOWrkX+6/7ZbDDJjMTfwLSOiZ/MMpWdE4DWPLOfTLOq/juj9CKzA==",
       "type": "package",
@@ -1600,6 +2117,53 @@
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.xml",
         "system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
+      ]
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.Numerics.Vectors.dll",
+        "ref/net45/System.Numerics.Vectors.xml",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.5.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Runtime.Caching/4.7.0": {
@@ -1772,6 +2336,43 @@
         "version.txt"
       ]
     },
+    "System.Security.Cryptography.Pkcs/6.0.0": {
+      "sha512": "elM3x+xSRhzQysiqo85SbidJJ2YbZlnvmh+53TuSZHsD7dNuuEWser+9EFtY+rYupBwkq2avc6ZCO3/6qACgmg==",
+      "type": "package",
+      "path": "system.security.cryptography.pkcs/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.Pkcs.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Security.Cryptography.Pkcs.dll",
+        "lib/net461/System.Security.Cryptography.Pkcs.xml",
+        "lib/net6.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/net6.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/netcoreapp3.1/System.Security.Cryptography.Pkcs.dll",
+        "lib/netcoreapp3.1/System.Security.Cryptography.Pkcs.xml",
+        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.dll",
+        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net461/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net461/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/netstandard2.1/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/netstandard2.1/System.Security.Cryptography.Pkcs.xml",
+        "system.security.cryptography.pkcs.6.0.0.nupkg.sha512",
+        "system.security.cryptography.pkcs.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Security.Cryptography.ProtectedData/4.7.0": {
       "sha512": "ehYW0m9ptxpGWvE4zgqongBVWpSDU/JCFD4K7krxkQwSz/sFQjEXCUqpvencjy6DYDbn7Ig09R8GFffu8TtneQ==",
       "type": "package",
@@ -1938,6 +2539,41 @@
         "version.txt"
       ]
     },
+    "System.Threading.Tasks.Extensions/4.5.2": {
+      "sha512": "BG/TNxDFv0svAzx8OiMXDlsHfGw623BZ8tCXw4YLhDFDvDhNUEV58jKYMGRnkbJNm7c3JNNJDiN7JBMzxRBR2w==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.2.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Windows.Extensions/4.7.0": {
       "sha512": "CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "type": "package",
@@ -1962,8 +2598,11 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Lexical.FileProvider.SharpCompress >= 0.14.4",
       "Microsoft.EntityFrameworkCore >= 6.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.9",
+      "NETCore.MailKit >= 2.1.0",
+      "Select.HtmlToPdf.NetCore >= 22.2.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -2006,6 +2645,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Lexical.FileProvider.SharpCompress": {
+            "target": "Package",
+            "version": "[0.14.4, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.9, )"
@@ -2013,6 +2656,14 @@
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[6.0.9, )"
+          },
+          "NETCore.MailKit": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
+          "Select.HtmlToPdf.NetCore": {
+            "target": "Package",
+            "version": "[22.2.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

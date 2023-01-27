@@ -14,6 +14,7 @@ namespace GiftCards.entity
         public int id_cab { get; set; }
         public int estado { get; set; }
         public DateTime? fecha_vencimiento { get; set; }
+        public DateTime fecha_creado { get; set; }
         public int local { get; set; }
         public DateTime? fecha_canje { get; set; }
         public int? usuario { get; set; }
@@ -22,8 +23,6 @@ namespace GiftCards.entity
         [NotMapped]
         public string? nombre_usuario { get; set; }
         public string? descripcion { get; set; }
-        [NotMapped]
-        public string? token { get; set; }
 
     }
 

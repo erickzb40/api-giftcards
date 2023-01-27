@@ -29,7 +29,7 @@ namespace GiftCards.Controllers
 
         // GET: api/cardcabs
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<giftcardcab>>> Getcardcabs(string token)
+        public async Task<ActionResult<IEnumerable<giftcardcab>>> Getcardcabs([FromHeader] string token)
         {
             var vtoken = _cifrado.validarToken(token);
             if (vtoken == null)
@@ -56,10 +56,10 @@ namespace GiftCards.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> Putgiftcardcab(giftcardcab giftcardcab)
+        public async Task<ActionResult> Putgiftcardcab([FromHeader] string token,giftcardcab giftcardcab)
         {
 
-            var vtoken = _cifrado.validarToken(giftcardcab.token);
+            var vtoken = _cifrado.validarToken(token);
             if (vtoken == null)
             {
                 return Problem("El token no es valido!");
@@ -115,9 +115,9 @@ namespace GiftCards.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<giftcardcab>> Postgiftcardcab(giftcardcab _giftcardcab)
+        public async Task<ActionResult<giftcardcab>> Postgiftcardcab([FromHeader] string token,giftcardcab _giftcardcab)
         {
-            var vtoken = _cifrado.validarToken(_giftcardcab.token);
+            var vtoken = _cifrado.validarToken(token);
             if (vtoken == null)
             {
                 return Problem("El token no es valido!");
@@ -174,7 +174,9 @@ namespace GiftCards.Controllers
                         estado = 5,
                         mostrar = _giftcardcab.montoTexto,
                         descripcion = _giftcardcab.descripcion,
-                        local = usuario_local.localid
+                        local = usuario_local.localid,
+                        fecha_creado = DateTime.Now
+                      
                 };
                     context.carddets.Add(gdet);
 
