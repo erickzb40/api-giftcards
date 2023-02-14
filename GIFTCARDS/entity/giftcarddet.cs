@@ -10,7 +10,8 @@ namespace GiftCards.entity
         public int id { get; set; }
         public string serie { get; set; }
         public decimal monto { get; set; }
-        public string documento_ref { get; set; }
+        public string? documento_ref { get; set; }
+        public string? dni_canje { get; set; } 
         public int id_cab { get; set; }
         public int estado { get; set; }
         public DateTime? fecha_vencimiento { get; set; }

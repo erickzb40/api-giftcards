@@ -3,6 +3,7 @@ using Asistencia_apirest.services;
 using GiftCards.entity;
 using GiftCards.metodos;
 using GIFTCARDS.entity;
+using GIFTCARDS.metodos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,14 +18,15 @@ namespace GiftCards.Controllers
         public SecurityManager _Aes;
         public cifrado _cifrado;
         public util _util;
-
-        public giftcardcabsController(util util_, SampleContext context, GenerarCodigoCupon cupon, SecurityManager sm, cifrado cifrado_)
+        public Conversion _convert;
+        public giftcardcabsController(util util_, SampleContext context, GenerarCodigoCupon cupon, SecurityManager sm, cifrado cifrado_, Conversion convert_)
         {
             _context = context;
             _codigoCupon = cupon;
             _Aes = sm;
             _cifrado = cifrado_;
             _util = util_;
+            _convert = convert_;
         }
 
         // GET: api/cardcabs
@@ -80,12 +82,12 @@ namespace GiftCards.Controllers
                 {
                     return Problem("El usuario ingresado no es valido");
                 }
-                var usuario_locales = await context.Usuario_local.Where(res => res.usuarioid.Equals(usuario.usuarioid)).ToListAsync();
-                if (usuario_locales == null)
-                {
+                var usuario_local = await context.Usuario_local.Where(a => a.usuarioid.Equals(usuario.usuarioid)).FirstOrDefaultAsync();
+                var local = await context.local.Where(a => a.id.Equals(usuario_local.localid)).FirstOrDefaultAsync();
+                if (usuario_local ==null || local == null) {
                     return Problem("No hay locales asignados");
                 }
-                int[] locales = _util.convertirArray(usuario_locales);
+                
                 if (giftcardcab == null) { return Problem("Ingrese todos los campos"); }
                 var cab = await context.cardcabs.FirstOrDefaultAsync(c => c.id == giftcardcab.id);
                 if (cab==null) { return Problem("No existe el registro"); }
@@ -97,6 +99,8 @@ namespace GiftCards.Controllers
                         if (d.estado != 2)
                         {
                             d.estado = giftcardcab.estado;
+                            d.documento_ref = giftcardcab.documento;
+                            context.SaveChanges();
                         }
                     }
                     User_aprob_log user_Aprob_Log = new User_aprob_log 
@@ -107,10 +111,12 @@ namespace GiftCards.Controllers
                      };
                     context.user_aprob_log.Add(user_Aprob_Log);
                     cab.estado = giftcardcab.estado;
+                    if (giftcardcab.documento!=null) { cab.documento = giftcardcab.documento; }
+                    _convert.convertirGiftcardEmail(det, cab, local);
                     context.SaveChanges();
-
                 }
-                return Ok(cab);
+
+                return Ok();
             }
         }
 
@@ -135,14 +141,10 @@ namespace GiftCards.Controllers
             {
                 var usuario = await context.Usuario.FirstOrDefaultAsync(res => res.nombreusuario.Equals(vtoken[1]) && res.contrasena.Equals(vtoken[2]));
                 var usuario_local = await context.Usuario_local.FirstOrDefaultAsync(res=>res.usuarioid.Equals(usuario.usuarioid));
-                var documento = from u in context.cardcabs where u.documento!.Equals(_giftcardcab.documento) select u;
+                var local = await context.local.FirstOrDefaultAsync(res => res.id.Equals(usuario_local.localid));
                 if (usuario == null)
                 {
                     return Problem("No tiene los permisos para relizar esta acción");
-                }
-                if (documento.Count() > 0)
-                {
-                    return Problem("El documento ingresado ya ha sido registrado!");
                 }
                 if (context.cardcabs == null || _giftcardcab.cantidad < 1)
                 {
@@ -166,10 +168,9 @@ namespace GiftCards.Controllers
                     var dpc = _giftcardcab.id.ToString() + _giftcardcab.cantidad + _giftcardcab.importe + i;
                     giftcarddet gdet = new giftcarddet
                     {
-                        serie = "LH" + _codigoCupon.couponCode(int.Parse(dpc)),
+                        serie = "LH"+local.tienda + _codigoCupon.couponCode(int.Parse(dpc)),
                         monto = _giftcardcab.importe,
                         id_cab = _giftcardcab.id,
-                        documento_ref = _giftcardcab.documento!,
                         fecha_vencimiento = _giftcardcab.fecha_vencimiento,
                         estado = 5,
                         mostrar = _giftcardcab.montoTexto,

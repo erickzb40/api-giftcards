@@ -198,6 +198,7 @@ namespace GiftCards.Controllers
                 giftcarddetresult.fecha_canje = DateTime.Now;
                 giftcarddetresult.usuario = usuario.usuarioid;
                 giftcarddetresult.estado = 2;
+                giftcarddetresult.dni_canje = giftcarddet.dni_canje;
                 //_context.Entry(giftcarddet).State = EntityState.Modified;
                 await context.SaveChangesAsync();
                 return NoContent();

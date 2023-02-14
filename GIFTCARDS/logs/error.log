@@ -1,0 +1,192 @@
+Fecha: 3/02/2023 13:43:16
+Mensaje de error: Access to the path 'C:\miArchivo.zip' is denied.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteAllBytes(String path, Byte[] bytes)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 103
+
+Fecha: 3/02/2023 13:44:27
+Mensaje de error: Could not find a part of the path 'C:\miCarpeta\miArchivo.zip'.
+Stack Trace:    at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteAllBytes(String path, Byte[] bytes)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 102
+
+Fecha: 13/02/2023 10:14:15
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 10:14:27
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 10:20:14
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 10:22:32
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 10:24:25
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 10:28:45
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 11:41:17
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 13:50:21
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 13:52:21
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 14:00:25
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 17:06:43
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 17:09:58
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 17:11:32
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 17:49:58
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 18:10:50
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 18:15:24
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 13/02/2023 22:07:23
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 14/02/2023 00:05:46
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 14/02/2023 00:06:03
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 14/02/2023 00:10:55
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 14/02/2023 00:12:42
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+
+Fecha: 14/02/2023 00:14:26
+Mensaje de error: 535: Incorrect authentication data
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at GIFTCARDS.metodos.Conversion.enviarCorreo(giftcardcab cab, Byte[] listaBytesRar, Local local) in E:\proyectos\apis\api-giftcards\GIFTCARDS\metodos\Conversion.cs:line 113
+

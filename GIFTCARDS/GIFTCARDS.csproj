@@ -16,9 +16,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="rar_temp\" />
-    <Folder Include="img_temp\" />
-  </ItemGroup>
-
 </Project>

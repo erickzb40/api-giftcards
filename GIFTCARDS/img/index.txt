@@ -15,7 +15,7 @@
 .codigo{
   position: absolute;
   top: 295px;
-  left: 160px;
+  left: 180px;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 25px;
